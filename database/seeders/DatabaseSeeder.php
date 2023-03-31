@@ -14,9 +14,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $this->call([
-            UserSeeder::class,
-            RestoSeeder::class,
-        ]);
+        if (config('app.debug', false)) {
+            $this->call([
+                UserSeeder::class,
+                RestoSeeder::class,
+            ]);
+        }
     }
 }
