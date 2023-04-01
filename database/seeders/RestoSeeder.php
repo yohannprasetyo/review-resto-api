@@ -13,6 +13,6 @@ class RestoSeeder extends Seeder
      */
     public function run(): void
     {
-        Resto::factory()->count(100)->create();
+        Resto::factory()->count(21)->create();
     }
 }
