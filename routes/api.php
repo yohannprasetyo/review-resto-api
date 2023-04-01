@@ -15,3 +15,4 @@ Route::middleware('auth:sanctum')->group(function () {
 });
 
 Route::apiResource('restos', RestoController::class);
+Route::get('/restos/{resto}/reviews', [RestoController::class, 'reviews'])->name('restos.reviews');
